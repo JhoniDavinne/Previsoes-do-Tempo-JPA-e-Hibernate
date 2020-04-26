@@ -1,4 +1,4 @@
-package br.usjt.ccp3bn_bua1_previsao_tempo;
+package br.usjt.ccp3bn_bua2_previsao_tempo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -23,10 +23,7 @@ public class AtualizaPrevisaoTempoEDiaSemana {
 		
 		ConverteStringForDate convData = new ConverteStringForDate();
 		previsaoTempo.setDataHora(convData.convertDate("12/04/2020 12:10"));
-		
-		previsaoTempo.setLatitude(-23.5475);
-		previsaoTempo.setLongitude(-46.63611);
-		
+			
 		DiaDaSemana diaDaSemana = manager.find(DiaDaSemana.class, previsaoTempo.getDiaDaSemana().getId());
 		
 		diaDaSemana.setNomeDaSemana("Domingo");

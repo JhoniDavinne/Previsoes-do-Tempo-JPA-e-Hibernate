@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 
 import br.usjt.ccp3bn_bua2_previsao_tempo.model.PrevisaoTempo;
 
-public class BuscaPrevisaoTempoComSemana {
+public class BuscaPrevisaoTempoComSemanaECidade {
 
 	public static void main(String[] args) {
 		

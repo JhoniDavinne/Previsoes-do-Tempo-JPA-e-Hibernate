@@ -1,9 +1,11 @@
 package br.usjt.ccp3bn_bua2_previsao_tempo.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +16,9 @@ public class DiaDaSemana {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nomeDaSemana;
+	
+	@OneToOne(mappedBy = "diaDaSemana", cascade = CascadeType.ALL)
+	private PrevisaoTempo previsaTempo;
 	
 	public Long getId() {
 		return id;
@@ -26,6 +31,12 @@ public class DiaDaSemana {
 	}
 	public void setNomeDaSemana(String nomeDaSemana) {
 		this.nomeDaSemana = nomeDaSemana;
+	}
+	public PrevisaoTempo getPrevisaTempo() {
+		return previsaTempo;
+	}
+	public void setPrevisaTempo(PrevisaoTempo previsaTempo) {
+		this.previsaTempo = previsaTempo;
 	}
 	@Override
 	public int hashCode() {
